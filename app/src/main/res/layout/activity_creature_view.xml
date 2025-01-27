@@ -7,15 +7,97 @@
     android:layout_height="match_parent"
     tools:context=".CreatureViewActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="DevMon"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvCreature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="Devmon"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvJava"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:text="Java"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/ivSa"
+            app:layout_constraintStart_toEndOf="@+id/tvCreature"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivSa"
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/sa" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCreatureJava"
+        android:layout_width="0dp"
+        android:layout_height="225dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#E4BAC7"
+        app:cardCornerRadius="20dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <ImageView
+            android:id="@+id/ivJava"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            app:srcCompat="@drawable/__java__1_" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Famoso por sua adaptabilidade e robustez, este Devmon pode se materializar em qualquer ambiente, de servidores a dispositivos móveis. "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvCreatureJava" />
+
+    <TextView
+        android:id="@+id/tvSlogan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="Seu lema: &quot;Escreva uma vez, rode em qualquer lugar.&quot;"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
